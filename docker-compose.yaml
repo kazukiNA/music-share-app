@@ -5,11 +5,3 @@ services:
     tty: true 
     volumes:
       - .:/go/src/app
-  mysql:
-        image: mysql:5.7.22
-        environment:
-            MYSQL_ROOT_PASSWORD: hogehoge
-            MYSQL_USER: root 
-            MYSQL_PASSWORD: hogehoge 
-            MYSQL_DATABASE: musdic_app 
-        container_name: mysql-container
