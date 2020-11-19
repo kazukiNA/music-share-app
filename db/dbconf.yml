@@ -1,0 +1,3 @@
+development:
+    driver: mysql
+    open: root:hogehoge@tcp(mysql:3306)/music_app?parseTime=true

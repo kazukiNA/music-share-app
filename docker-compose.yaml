@@ -2,9 +2,11 @@ version: '3'
 services:
   api:
     build: ./docker 
+    ports:
+      - 8080:8080
     tty: true 
     volumes:
-      - .:/go/src/app
+      - .:/go/src/music_app_api
   mysql:
         image: mysql:5.7.22
         environment:
