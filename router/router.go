@@ -1,6 +1,7 @@
 package router
 
 import (
+	"music_app_api/controller"
 	"music_app_api/middleware"
 
 	"github.com/gin-contrib/cors"
@@ -29,10 +30,7 @@ func SetupRouter() *gin.Engine {
 		// MaxAge: 12 * time.Hour,
 	}))
 	r.Use(gin.Recovery())
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "success",
-		})
-	})
+	r.GET("/ping", controller.Ping)
+	r.POST(("users"), controller.AddUsers)
 	return r
 }
